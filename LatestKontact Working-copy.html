@@ -134,6 +134,10 @@
             position: relative;
             top: 37%;
         }
+.btn.btn-primary:disabled{
+    background-color: #d1d1d1;
+    border:1px solid #d1d1d1;
+}
 
     </style>
 </head>
@@ -461,7 +465,7 @@
                 </div>
 
                 <div class='col-sm-4 col-md-4 col-lg-4 col-xl-4 field-group'>
-                    <label for="mobile">Phone *</label><input id="mobile" minlength="10" maxlength="10" name="mobile"
+                    <label for="mobile">Phone</label><input id="mobile" minlength="10" maxlength="10" name="mobile"
                         size="20" type="tel" onblur="mb()" required />
                     <div class="errormb"></div>
                 </div>
@@ -471,15 +475,17 @@
                     <label for="industry">Select Service *</label>
                     <select id="industry" name="industry" onchange="inds()">
                         <option value="none">--None--</option>
-                        <option value="Cloud">&nbsp;Cloud</option>
-                        <option value="EnterpriseTransformation">&nbsp;Enterprise&nbsp;Transformation</option>
-                        <option value="Foundation">&nbsp;Foundation</option>
-                        <option value="MigrationDeployment">&nbsp;Migration&nbsp;&amp;&nbsp;Deployment</option>
-                        <option value="Operations">&nbsp;Operations</option>
-                        <option value="Office">&nbsp;Office 365</option>
-                        <option value="ManagedServices">&nbsp;Managed Services</option>
-                        <option value="backupDRaas">&nbsp;Backup DRaas</option>
-                        <option value="HostedInfrastructure">&nbsp;Hosted Infrastructure</option>
+                        <option value="Microservices">&nbsp;Microservices</option>
+                        <option value="Devops">&nbsp;Devops</option>
+                        <option value="Cloudmigrationservices">&nbsp;Cloud Migration Services</option>
+                        <option value="Publiccloudsolutions">&nbsp;Public Cloud Solutions</option>
+                        <option value="hybridcloudsolutions">&nbsp;Hybrid Cloud Solutions</option>
+                        <option value="monitoring&analyticssolutions">&nbsp;Monitoring & Analytics Solutions</option>
+                        <option value="Hostingervices">&nbsp;Hosting Services</option>
+                        <option value="Backupservices">&nbsp;Backup Services</option>
+                        <option value="DisasterRecoveryservices">&nbsp;Disaster Recovery Services</option>
+                        <option value="O365services">&nbsp;Microsoft office 365 Services</option>
+                        <option value="managedservices">&nbsp;Managed Services</option>
                         <option value="Others" id="others">&nbsp;Other</option>
                     </select>
                     <div class="errormss"></div>
@@ -725,6 +731,7 @@
         }
 
     }
+
     var isDataValid = false;
     function enableDisableButton(){
         var isValid = true;

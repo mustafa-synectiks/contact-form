@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -465,9 +466,9 @@
                 </div>
 
                 <div class='col-sm-4 col-md-4 col-lg-4 col-xl-4 field-group'>
-                    <label for="mobile">Phone *</label><input id="mobile" minlength="10" maxlength="10" name="mobile"
-                        size="20" type="tel" onblur="mb()" required />
-                    <div class="errormb"></div>
+                    <label for="mobile">Phone</label><input id="mobile" minlength="10" maxlength="10" name="mobile"
+                        size="20" type="tel"   />
+                    <!-- <div class="errormb"></div> -->
                 </div>
             </div>
             <div class="row">
@@ -521,7 +522,7 @@
         f: false,
         l: false,
         c: false,
-        mb: false,
+        // mb: false,
         ml: false,
         src: false,
         inds: false
@@ -613,24 +614,24 @@
             // enableDisableButton();
         }
     }
-    function mb() {
-        let mb = document.getElementById('mobile');
-        let fn = document.getElementsByClassName('errormb');
-        if (mb.value.length === 0) {
-            fn[0].innerHTML = 'Please Enter Your Phone Number';
-            validationArr["mb"] = false;
-            enableDisableButton();
-        } else if (mb.value.length < 10) {
-            fn[0].innerHTML = 'Please enter correct Phone Number';
-            validationArr["mb"] = false;
-            enableDisableButton();
-        }
-        else {
-            fn[0].innerHTML = '';
-            validationArr["mb"] = true;
-            enableDisableButton();
-        }
-    }
+    // function mb() {
+    //     let mb = document.getElementById('mobile');
+    //     let fn = document.getElementsByClassName('errormb');
+    //     if (mb.value.length === 0) {
+    //         fn[0].innerHTML = 'Please Enter Your Phone Number';
+    //         validationArr["mb"] = true;
+    //         enableDisableButton();
+    //     } else if (mb.value.length < 10) {
+    //         fn[0].innerHTML = 'Please enter correct Phone Number';
+    //         validationArr["mb"] = true;
+    //         enableDisableButton();
+    //     }
+    //     else {
+    //         fn[0].innerHTML = '';
+    //         validationArr["mb"] = true;
+    //         enableDisableButton();
+    //     }
+    // }
     function ml(vEmail) {
         let ml = document.getElementById('email');
         let fn = document.getElementsByClassName('errorml');
@@ -731,6 +732,7 @@
         }
 
     }
+
 
     var isDataValid = false;
     function enableDisableButton(){
